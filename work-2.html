@@ -10,6 +10,18 @@
   <script>
     const root = document.getElementById("root");
 
+    const h1Component = () =>{
+      return `<h1>조자연</h1>`;
+    };
+
+    const app = () => {
+      return `${h1Component()}`;
+    };
+    const render = ()=> {
+      root.innerHTML = app();
+    };
+    
+    render();
   </script>
 </body>
 </html>
