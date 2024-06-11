@@ -10,17 +10,22 @@
   <script>
     const root = document.getElementById("root");
 
-    const h1Component = () =>{
-      return `<h1>조자연</h1>`;
+    const tagComponent = (tagname, textnode) =>{
+      return `<${tagname}>${textnode}</${tagname}>`;
     };
 
     const app = () => {
-      return `${h1Component()}`;
+      return `
+      ${tagComponent("h1","조")}
+      ${tagComponent("h2","자")}
+      ${tagComponent("h3","연")}
+      `;
     };
+
     const render = ()=> {
       root.innerHTML = app();
     };
-    
+
     render();
   </script>
 </body>
